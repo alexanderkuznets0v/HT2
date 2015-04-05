@@ -1,0 +1,16 @@
+cmake_minimum_required(VERSION 3.0)
+
+
+set(CMAKE_VERBOSE_MAKEFILE on)
+
+
+find_package(PythonLibs 3.2 REQUIRED)
+
+
+include_directories(${PYTHON_INCLUDE_DIRS})
+
+
+python_add_module(ht_cpp ht_cpp.cpp)
+
+
+target_link_libraries(ht_cpp ${PYTHON_LIBRARIES})
