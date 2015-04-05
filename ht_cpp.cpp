@@ -86,7 +86,7 @@ static PyObject * matrixops_faster_dot(PyObject * module, PyObject * args)
 	return py_result;
 }
 
-PyMODINIT_FUNC PyInit_matrixops()
+PyMODINIT_FUNC PyInit_ht_cpp()
 {
 	static PyMethodDef ModuleMethods[] = {
 		{ "faster_dot", matrixops_faster_dot, METH_VARARGS, "Fater matrix production" },

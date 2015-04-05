@@ -144,9 +144,13 @@ def cpp_calk(f_input_name, f_output_name):
 def final_answer(f_input_name, f_output_name):
     time_cpp = cpp_calk(f_input_name, f_output_name)
     time_py = py_calk(f_input_name, f_output_name)
+    if ((time_py - time_cpp) == 0):
+        return 1
+    else:
+        if time_cpp == 0:
+            return float('inf')
     return time_py/time_cpp
 
 if __name__ == "__main__":
     to_print = final_answer(sys.argv[1],sys.argv[2])
     print(to_print)
-    return
